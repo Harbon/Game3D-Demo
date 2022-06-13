@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Area",
+"class": "Coin",
+"language": "GDScript",
+"path": "res://scripts/Coin.gd"
+}, {
+"base": "KinematicBody",
+"class": "PlayBall",
+"language": "GDScript",
+"path": "res://scripts/PlayBall.gd"
+} ]
+_global_script_class_icons={
+"Coin": "",
+"PlayBall": ""
+}
+
+[application]
+
+config/name="3d- Maze- Dodge"
+run/main_scene="res://scenes/StartMenu.tscn"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/color_picker_text_button/plugin.cfg" )
+
+[global]
+
+zoom=false
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://new_env.tres"
